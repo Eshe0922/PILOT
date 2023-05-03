@@ -51,18 +51,17 @@ To download the dataset used for evaluation in our experiments, run the followin
 ## Running the model
 ## Results
 ### Results of RQ1
-<table border=0 cellpadding=0 cellspacing=0 width=563 style='border-collapse:
- collapse;table-layout:fixed;width:422pt'>
- <col width=179 style='mso-width-source:userset;mso-width-alt:6371;width:134pt'>
- <col width=64 span=6 style='width:48pt'>
+<table border=0 cellpadding=0 cellspacing=0 width=1050 style='border-collapse:
+ collapse;table-layout:fixed;width:784pt'>
+ <col width=150 span=7 style='width:112pt'>
  <tr height=18 style='height:13.8pt'>
-  <td height=18 class=xl70 width=179 style='height:13.8pt;width:134pt'>Dataset\Metrics(%)</td>
-  <td class=xl70 width=64 style='border-left:none;width:48pt'>Baseline</td>
-  <td class=xl70 width=64 style='border-left:none;width:48pt'>Devign</td>
-  <td class=xl70 width=64 style='border-left:none;width:48pt'>Reveal</td>
-  <td class=xl70 width=64 style='border-left:none;width:48pt'>IVDetect</td>
-  <td class=xl70 width=64 style='border-left:none;width:48pt'>CodeBERT</td>
-  <td class=xl70 width=64 style='border-left:none;width:48pt'>PUVD</td>
+  <td height=18 class=xl70 width=150 style='height:13.8pt;width:112pt'>Dataset\Metrics(%)</td>
+  <td class=xl70 width=150 style='border-left:none;width:112pt'>Baseline</td>
+  <td class=xl70 width=150 style='border-left:none;width:112pt'>Devign</td>
+  <td class=xl70 width=150 style='border-left:none;width:112pt'>Reveal</td>
+  <td class=xl70 width=150 style='border-left:none;width:112pt'>IVDetect</td>
+  <td class=xl70 width=150 style='border-left:none;width:112pt'>CodeBERT</td>
+  <td class=xl70 width=150 style='border-left:none;width:112pt'>PUVD</td>
  </tr>
  <tr height=18 style='height:13.8pt'>
   <td rowspan=4 height=72 class=xl70 style='height:55.2pt;border-top:none'>FFMPeg+Qemu</td>
@@ -173,7 +172,6 @@ To download the dataset used for evaluation in our experiments, run the followin
   <td class=xl89 style='border-top:none;border-left:none'>36.46</td>
   <td class=xl90 style='border-top:none;border-left:none'>39.46</td>
  </tr>
-
 </table>
 
 ### Results of RQ2
