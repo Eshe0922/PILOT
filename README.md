@@ -178,6 +178,130 @@ To download the dataset used for evaluation in our experiments, run the followin
 
 ### Results of RQ2
 
+<table border=0 cellpadding=0 cellspacing=0 width=448 style='border-collapse:
+ collapse;table-layout:fixed;width:336pt'>
+ <col width=64 span=7 style='width:48pt'>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 width=64 style='height:13.8pt;width:48pt'>Dataset\Metrics(%)</td>
+  <td class=xl89 width=64 style='border-left:none;width:48pt'>Baseline</td>
+  <td class=xl89 width=64 style='border-left:none;width:48pt'>Cosine and
+  Rocchio SVM</td>
+  <td class=xl89 width=64 style='border-left:none;width:48pt'>Unbiased PU</td>
+  <td class=xl89 width=64 style='border-left:none;width:48pt'>Non-negative PU</td>
+  <td class=xl89 width=64 style='border-left:none;width:48pt'>Self-PU</td>
+  <td class=xl89 width=64 style='border-left:none;width:48pt'>PUVD</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=4 height=72 class=xl89 style='height:55.2pt;border-top:none'>FFMPeg+Qemu</td>
+  <td class=xl89 style='border-top:none;border-left:none'>Acc</td>
+  <td class=xl89 style='border-top:none;border-left:none'>48.99</td>
+  <td class=xl89 style='border-top:none;border-left:none'>56.08</td>
+  <td class=xl91 style='border-top:none;border-left:none'>56.01</td>
+  <td class=xl91 style='border-top:none;border-left:none'>53.69</td>
+  <td class=xl91 style='border-top:none;border-left:none'>58.38</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>Pre</td>
+  <td class=xl89 style='border-top:none;border-left:none'>45.83</td>
+  <td class=xl89 style='border-top:none;border-left:none'>54.43</td>
+  <td class=xl91 style='border-top:none;border-left:none'>50.20</td>
+  <td class=xl91 style='border-top:none;border-left:none'>50.15</td>
+  <td class=xl91 style='border-top:none;border-left:none'>54.66</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>Rec</td>
+  <td class=xl89 style='border-top:none;border-left:none'>60.80</td>
+  <td class=xl89 style='border-top:none;border-left:none'>30.15</td>
+  <td class=xl91 style='border-top:none;border-left:none'>41.96</td>
+  <td class=xl91 style='border-top:none;border-left:none'>44.30</td>
+  <td class=xl91 style='border-top:none;border-left:none'>55.48</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>F1</td>
+  <td class=xl89 style='border-top:none;border-left:none'>52.21</td>
+  <td class=xl89 style='border-top:none;border-left:none'>38.74</td>
+  <td class=xl91 style='border-top:none;border-left:none'>46.60</td>
+  <td class=xl91 style='border-top:none;border-left:none'>45.85</td>
+  <td class=xl91 style='border-top:none;border-left:none'>54.99</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=4 height=72 class=xl89 style='height:55.2pt;border-top:none'>Reveal</td>
+  <td class=xl89 style='border-top:none;border-left:none'>Acc</td>
+  <td class=xl89 style='border-top:none;border-left:none'>86.10</td>
+  <td class=xl91 style='border-top:none;border-left:none'>83.09</td>
+  <td class=xl91 style='border-top:none;border-left:none'>83.07</td>
+  <td class=xl91 style='border-top:none;border-left:none'>84.41</td>
+  <td class=xl91 style='border-top:none;border-left:none'>86.99</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>Pre</td>
+  <td class=xl89 style='border-top:none;border-left:none'>7.87</td>
+  <td class=xl91 style='border-top:none;border-left:none'>28.79</td>
+  <td class=xl91 style='border-top:none;border-left:none'>28.93</td>
+  <td class=xl91 style='border-top:none;border-left:none'>22.01</td>
+  <td class=xl91 style='border-top:none;border-left:none'>40.83</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>Rec</td>
+  <td class=xl89 style='border-top:none;border-left:none'>9.12</td>
+  <td class=xl91 style='border-top:none;border-left:none'>26.55</td>
+  <td class=xl91 style='border-top:none;border-left:none'>27.18</td>
+  <td class=xl91 style='border-top:none;border-left:none'>17.32</td>
+  <td class=xl91 style='border-top:none;border-left:none'>47.34</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>F1</td>
+  <td class=xl89 style='border-top:none;border-left:none'>7.80</td>
+  <td class=xl91 style='border-top:none;border-left:none'>24.75</td>
+  <td class=xl91 style='border-top:none;border-left:none'>25.38</td>
+  <td class=xl91 style='border-top:none;border-left:none'>18.61</td>
+  <td class=xl91 style='border-top:none;border-left:none'>43.82</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=4 height=72 class=xl89 style='height:55.2pt;border-top:none'>Fan
+  et al.</td>
+  <td class=xl89 style='border-top:none;border-left:none'>Acc</td>
+  <td class=xl89 style='border-top:none;border-left:none'>85.66</td>
+  <td class=xl91 style='border-top:none;border-left:none'>91.44</td>
+  <td class=xl91 style='border-top:none;border-left:none'>91.45</td>
+  <td class=xl91 style='border-top:none;border-left:none'>89.52</td>
+  <td class=xl91 style='border-top:none;border-left:none'>91.92</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>Pre</td>
+  <td class=xl89 style='border-top:none;border-left:none'>9.57</td>
+  <td class=xl91 style='border-top:none;border-left:none'>24.52</td>
+  <td class=xl91 style='border-top:none;border-left:none'>25.15</td>
+  <td class=xl91 style='border-top:none;border-left:none'>19.75</td>
+  <td class=xl91 style='border-top:none;border-left:none'>29.05</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>Rec</td>
+  <td class=xl89 style='border-top:none;border-left:none'>6.18</td>
+  <td class=xl91 style='border-top:none;border-left:none'>11.22</td>
+  <td class=xl91 style='border-top:none;border-left:none'>10.77</td>
+  <td class=xl91 style='border-top:none;border-left:none'>9.39</td>
+  <td class=xl91 style='border-top:none;border-left:none'>30.30</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>F1</td>
+  <td class=xl89 style='border-top:none;border-left:none'>6.72</td>
+  <td class=xl91 style='border-top:none;border-left:none'>10.62</td>
+  <td class=xl91 style='border-top:none;border-left:none'>9.79</td>
+  <td class=xl91 style='border-top:none;border-left:none'>9.04</td>
+  <td class=xl91 style='border-top:none;border-left:none'>29.55</td>
+ </tr>
+</table>
+
 ### Results of RQ3
 
 ### Results of RQ4
