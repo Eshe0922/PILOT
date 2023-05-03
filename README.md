@@ -49,6 +49,20 @@ To download the dataset used for evaluation in our experiments, run the followin
     python split data_Devign(Reveal/Fan).py
 
 ## Running the model
+## Results
+### Results of RQ1
+| Metrics(%) \ Dataset | FFMPeg+Qemu | Reveal | Fan at al.|
+| :------:             | :------:    |:------:|  :------: |
+| Baseline             |Acc Pre Rec F1|Acc Pre Rec F1|Acc Pre Rec F1|  
+| Devign               |              |              |              |
+|                      |              |              |              |
+|                      |              |              |              |
+|                      |              |              |              |
+### Results of RQ2
+### Results of RQ3
+### Results of RQ4
+### Ablation Study Results 
+
 ## References
 [1] Jiahao Fan, Yi Li, Shaohua Wang, and Tien Nguyen. 2020. A C/C++ Code Vulnerability Dataset with Code Changes and CVE Summaries. In The 2020 International Conference on Mining Software Repositories (MSR). IEEE.
 
