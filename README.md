@@ -302,9 +302,92 @@ To download the dataset used for evaluation in our experiments, run the followin
 
 ### Results of RQ3
 
+<table border=0 cellpadding=0 cellspacing=0 width=600 style='border-collapse:
+ collapse;table-layout:fixed;width:448pt'>
+ <col width=150 span=4 style='width:112pt'>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 width=150 style='height:13.8pt;width:112pt'>Dataset</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>Module</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>Acc</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>F1</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=4 height=72 class=xl89 style='height:55.2pt;border-top:none'>FFMPeg+Qemu</td>
+  <td class=xl89 style='border-top:none;border-left:none'>w/o ID Prototype</td>
+  <td class=xl89 style='border-top:none;border-left:none'>56.30</td>
+  <td class=xl89 style='border-top:none;border-left:none'>47.35</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>w/o Pfine-tuning</td>
+  <td class=xl89 style='border-top:none;border-left:none'>56.77</td>
+  <td class=xl89 style='border-top:none;border-left:none'>58.17</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>w/o RPML</td>
+  <td class=xl89 style='border-top:none;border-left:none'>58.71</td>
+  <td class=xl89 style='border-top:none;border-left:none'>55.49</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>PUVD</td>
+  <td class=xl89 style='border-top:none;border-left:none'>59.30</td>
+  <td class=xl89 style='border-top:none;border-left:none'>57.23</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=4 height=72 class=xl89 style='height:55.2pt;border-top:none'>Reveal</td>
+  <td class=xl89 style='border-top:none;border-left:none'>w/o ID Prototype</td>
+  <td class=xl89 style='border-top:none;border-left:none'>73.97</td>
+  <td class=xl91 style='border-top:none;border-left:none'>41.27</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>w/o Pfine-tuning</td>
+  <td class=xl89 style='border-top:none;border-left:none'>60.47</td>
+  <td class=xl91 style='border-top:none;border-left:none'>32.66</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>w/o RPML</td>
+  <td class=xl89 style='border-top:none;border-left:none'>80.43</td>
+  <td class=xl91 style='border-top:none;border-left:none'>48.20</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>PUVD</td>
+  <td class=xl89 style='border-top:none;border-left:none'>85.79</td>
+  <td class=xl91 style='border-top:none;border-left:none'>54.18</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=4 height=72 class=xl89 style='height:55.2pt;border-top:none'>Fan
+  et al.</td>
+  <td class=xl89 style='border-top:none;border-left:none'>w/o ID Prototype</td>
+  <td class=xl89 style='border-top:none;border-left:none'>72.90</td>
+  <td class=xl91 style='border-top:none;border-left:none'>21.83</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>w/o Pfine-tuning</td>
+  <td class=xl89 style='border-top:none;border-left:none'>57.43</td>
+  <td class=xl91 style='border-top:none;border-left:none'>18.09</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>w/o RPML</td>
+  <td class=xl89 style='border-top:none;border-left:none'>77.77</td>
+  <td class=xl91 style='border-top:none;border-left:none'>24.19</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl89 style='height:13.8pt;border-top:none;border-left:
+  none'>PUVD</td>
+  <td class=xl89 style='border-top:none;border-left:none'>87.62</td>
+  <td class=xl91 style='border-top:none;border-left:none'>28.70</td>
+ </tr>
+</table>
+
 ### Results of RQ4
 
-### Ablation Study Results 
 
 ## References
 [1] Jiahao Fan, Yi Li, Shaohua Wang, and Tien Nguyen. 2020. A C/C++ Code Vulnerability Dataset with Code Changes and CVE Summaries. In The 2020 International Conference on Mining Software Repositories (MSR). IEEE.
