@@ -52,12 +52,12 @@ To download the dataset used for evaluation in our experiments, run the followin
 ## Results
 ### Results of RQ1
 | Metrics(%) \ Dataset | FFMPeg+Qemu | Reveal | Fan at al.|
-| :------:             | :------:    |:------:|  :------: |
-| Baseline             |Acc Pre Rec F1|Acc Pre Rec F1|Acc Pre Rec F1|  
-| Devign               |              |              |              |
-|                      |              |              |              |
-|                      |              |              |              |
-|                      |              |              |              |
+| :----------:             | :----------:      | :----------:      |  :----------:     |
+| Baseline                 | Acc     Pre    Rec  F1   | Acc  Pre  Rec  F1 | Acc  Pre  Rec  F1 |  
+| Devign                   | 56.89  52.50  64.47 57.95|                  |                   |                   |  
+|                          |                   |                   |                   |
+|                          |                 |              |              |
+|                          |                 |              |              |
 ### Results of RQ2
 ### Results of RQ3
 ### Results of RQ4
