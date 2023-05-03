@@ -184,10 +184,9 @@ To download the dataset used for evaluation in our experiments, run the followin
  <tr height=18 style='height:13.8pt'>
   <td height=18 class=xl89 width=150 style='height:13.8pt;width:112pt'>Dataset\Metrics(%)</td>
   <td class=xl89 width=150 style='border-left:none;width:112pt'>Baseline</td>
-  <td class=xl89 width=150 style='border-left:none;width:112pt'>Cosine and
-  Rocchio SVM</td>
-  <td class=xl89 width=150 style='border-left:none;width:112pt'>Unbiased PU</td>
-  <td class=xl89 width=150 style='border-left:none;width:112pt'>Non-negative PU</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>CR SVM</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>uPU</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>nnPU</td>
   <td class=xl89 width=150 style='border-left:none;width:112pt'>Self-PU</td>
   <td class=xl89 width=150 style='border-left:none;width:112pt'>PUVD</td>
  </tr>
