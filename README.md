@@ -178,18 +178,18 @@ To download the dataset used for evaluation in our experiments, run the followin
 
 ### Results of RQ2
 
-<table border=0 cellpadding=0 cellspacing=0 width=448 style='border-collapse:
- collapse;table-layout:fixed;width:336pt'>
- <col width=64 span=7 style='width:48pt'>
+<table border=0 cellpadding=0 cellspacing=0 width=1050 style='border-collapse:
+ collapse;table-layout:fixed;width:784pt'>
+ <col width=150 span=7 style='width:112pt'>
  <tr height=18 style='height:13.8pt'>
-  <td height=18 class=xl89 width=64 style='height:13.8pt;width:48pt'>Dataset\Metrics(%)</td>
-  <td class=xl89 width=64 style='border-left:none;width:48pt'>Baseline</td>
-  <td class=xl89 width=64 style='border-left:none;width:48pt'>Cosine and
+  <td height=18 class=xl89 width=150 style='height:13.8pt;width:112pt'>Dataset\Metrics(%)</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>Baseline</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>Cosine and
   Rocchio SVM</td>
-  <td class=xl89 width=64 style='border-left:none;width:48pt'>Unbiased PU</td>
-  <td class=xl89 width=64 style='border-left:none;width:48pt'>Non-negative PU</td>
-  <td class=xl89 width=64 style='border-left:none;width:48pt'>Self-PU</td>
-  <td class=xl89 width=64 style='border-left:none;width:48pt'>PUVD</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>Unbiased PU</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>Non-negative PU</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>Self-PU</td>
+  <td class=xl89 width=150 style='border-left:none;width:112pt'>PUVD</td>
  </tr>
  <tr height=18 style='height:13.8pt'>
   <td rowspan=4 height=72 class=xl89 style='height:55.2pt;border-top:none'>FFMPeg+Qemu</td>
@@ -300,6 +300,7 @@ To download the dataset used for evaluation in our experiments, run the followin
   <td class=xl91 style='border-top:none;border-left:none'>9.04</td>
   <td class=xl91 style='border-top:none;border-left:none'>29.55</td>
  </tr>
+
 </table>
 
 ### Results of RQ3
