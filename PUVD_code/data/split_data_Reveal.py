@@ -8,8 +8,8 @@ from sklearn.utils import shuffle
 import random
 from sklearn.model_selection import train_test_split
 
-DATASET_DIR='./data_raw/Reveal'
-DATA_DIR='./data_preprocessed/Reveal'
+DATASET_DIR='./data_raw'
+DATA_DIR='./data_preprocessed'
 
 def format_str(string):
     for char in ['\r\n', '\r', '\n']:
@@ -93,5 +93,5 @@ def preprocess_data(path1,path2):
         f3.writelines('\n'.join(test))
 
 if __name__ == '__main__':
-
+        
     preprocess_data('./non-vulnerables.json','./vulnerables.json')

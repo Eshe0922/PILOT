@@ -49,9 +49,9 @@ def preprocess_data(path1,path2):
 
 if __name__ == '__main__':
 
-    preprocess_data('./data_raw/Fan/train.csv','./data_preprocessed/Fan/train.txt')
-    preprocess_data('./data_raw/Fan/val.csv','./data_preprocessed/Fan/valid.txt')
-    preprocess_data('./data_raw/Fan/test.csv','./data_preprocessed/Fan/test.txt')
+    preprocess_data('./data_raw/train.csv','./data_preprocessed/train.txt')
+    preprocess_data('./data_raw/val.csv','./data_preprocessed/valid.txt')
+    preprocess_data('./data_raw/test.csv','./data_preprocessed/test.txt')
 
 
 

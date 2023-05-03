@@ -39,6 +39,15 @@ Fan et al. [1]: https://drive.google.com/file/d/1-0VhnHBp9IGh90s2wCNjeCMuy70HPl8
 Reveal [2]: https://drive.google.com/drive/folders/1KuIYgFcvWUXheDhT--cBALsfy1I4utOyF
 
 FFMPeg+Qemu [3]: https://drive.google.com/file/d/1x6hoF7G-tSYxg8AFybggypLZgMGDNHfF
+
+To download the dataset used for evaluation in our experiments, run the following commands:
+    
+    # If you want to download multiple datasets, please note the overlay of the storage location!
+    cd data_raw
+    gdown path_Devign(path_Reveal/path_Fan)
+    cd ..
+    python split data_Devign(Reveal/Fan).py
+
 ## Running the model
 ## References
 [1] Jiahao Fan, Yi Li, Shaohua Wang, and Tien Nguyen. 2020. A C/C++ Code Vulnerability Dataset with Code Changes and CVE Summaries. In The 2020 International Conference on Mining Software Repositories (MSR). IEEE.

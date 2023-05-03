@@ -4,8 +4,8 @@ import json
 import numpy as np
 from more_itertools import chunked
 
-DATASET_DIR='./data_preprocessed/Devign'
-DATA_DIR='./data_raw/Devign'
+DATASET_DIR='./data_raw'
+DATA_DIR='./data_preprocessed'
 
 def format_str(string):
     for char in ['\r\n', '\r', '\n']:
@@ -135,6 +135,7 @@ def preprocess_test_data():
         f.writelines('\n'.join(examples_test))
 
 if __name__ == '__main__':
+
     preprocess_train_data()
     preprocess_eval_data()
     preprocess_test_data()
