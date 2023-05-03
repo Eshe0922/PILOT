@@ -173,17 +173,7 @@ To download the dataset used for evaluation in our experiments, run the followin
   <td class=xl89 style='border-top:none;border-left:none'>36.46</td>
   <td class=xl90 style='border-top:none;border-left:none'>39.46</td>
  </tr>
- <![if supportMisalignedColumns]>
- <tr height=0 style='display:none'>
-  <td width=179 style='width:134pt'></td>
-  <td width=64 style='width:48pt'></td>
-  <td width=64 style='width:48pt'></td>
-  <td width=64 style='width:48pt'></td>
-  <td width=64 style='width:48pt'></td>
-  <td width=64 style='width:48pt'></td>
-  <td width=64 style='width:48pt'></td>
- </tr>
- <![endif]>
+
 </table>
 
 ### Results of RQ2
