@@ -51,6 +51,11 @@ To download the dataset used for evaluation in our experiments, run the followin
 ## Running the model
 ## Results
 ### Results of RQ1
+
+TABLE I: Comparison results between PILOT and the vulnerability detection methods on the three datasets. “-” means that
+the baseline does not apply to the dataset in this scenario. The best result for each metric is highlighted in bold. The shaded
+cells represent the performance of the top-1 best methods in each metric. Darker cells represent better performance.
+
 <table border=0 cellpadding=0 cellspacing=0 width=1050 style='border-collapse:
  collapse;table-layout:fixed;width:784pt'>
  <col width=150 span=7 style='width:112pt'>
@@ -175,6 +180,9 @@ To download the dataset used for evaluation in our experiments, run the followin
 </table>
 
 ### Results of RQ2
+
+TABLE II: Comparison results between PILOT and the Positive and Unlabeled (PU) learning approaches on the three datasets.
+The shaded cells represent the performance of the best methods in each metric. Darker cells represent better performance.
 
 <table border=0 cellpadding=0 cellspacing=0 width=1050 style='border-collapse:
  collapse;table-layout:fixed;width:784pt'>
@@ -302,6 +310,9 @@ To download the dataset used for evaluation in our experiments, run the followin
 
 ### Results of RQ3
 
+TABLE III: Impact of the different components on the perfor-
+mance of PILOT.
+
 <table border=0 cellpadding=0 cellspacing=0 width=600 style='border-collapse:
  collapse;table-layout:fixed;width:448pt'>
  <col width=150 span=4 style='width:112pt'>
@@ -387,6 +398,8 @@ To download the dataset used for evaluation in our experiments, run the followin
 </table>
 
 ### Results of RQ4
+
+TABLE IV: The effect of choosing different proportions of labels on the performance of the PILOT.
 
 <table border=0 cellpadding=0 cellspacing=0 width=1050 style='border-collapse:
  collapse;table-layout:fixed;width:784pt'>
@@ -508,6 +521,83 @@ To download the dataset used for evaluation in our experiments, run the followin
   <td class=xl90 style='border-top:none;border-left:none'>30.86</td>
   <td class=xl90 style='border-top:none;border-left:none'>35.61</td>
   <td class=xl90 style='border-top:none;border-left:none'>39.00</td>
+ </tr>
+ 
+</table>
+
+TABLE V: The number of samples k selected by PILOT and
+the corresponding accuracy in the inter-class prototype step.
+The percentage (%) indicates the number of selected samples
+among all unlabeled samples. Num denotes the number of
+selecting reliable negative samples in the inter-class prototype
+step.
+
+<table border=0 cellpadding=0 cellspacing=0 width=1050 style='border-collapse:
+ collapse;table-layout:fixed;width:784pt'>
+ <col width=150 span=7 style='width:112pt'>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 width=150 style='height:13.8pt;width:112pt'>Dataset</td>
+  <td class=xl69 width=150 style='border-left:none;width:112pt'>k</td>
+  <td class=xl95 width=150 style='border-left:none;width:112pt'>3 </td>
+  <td class=xl96 width=150 style='border-left:none;width:112pt'>5 </td>
+  <td class=xl92 width=150 style='border-left:none;width:112pt'>30%</td>
+  <td class=xl92 width=150 style='border-left:none;width:112pt'>50%</td>
+  <td class=xl92 width=150 style='border-left:none;width:112pt'>100%</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=2 height=36 class=xl69 style='height:27.6pt;border-top:none'>FFMPeg+Qemu</td>
+  <td class=xl69 style='border-top:none;border-left:none'>Acc(%)</td>
+  <td class=xl93 style='border-top:none;border-left:none'>73.03 </td>
+  <td class=xl93 style='border-top:none;border-left:none'>73.25 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>75.18 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>75.25 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>75.30 </td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>Num</td>
+  <td class=xl95 style='border-top:none;border-left:none'>5210 </td>
+  <td class=xl95 style='border-top:none;border-left:none'>5211 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>5560 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>5563 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>5584 </td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=2 height=36 class=xl69 style='height:27.6pt;border-top:none'>Reveal</td>
+  <td class=xl69 style='border-top:none;border-left:none'>Acc(%)</td>
+  <td class=xl93 style='border-top:none;border-left:none'>99.21 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>99.20 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>99.34 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>99.42 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>99.44 </td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>Num</td>
+  <td class=xl95 style='border-top:none;border-left:none'>4822 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>4770 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>5172 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>5194 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>5195 </td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=2 height=36 class=xl69 style='height:27.6pt;border-top:none'>Fan
+  et al.</td>
+  <td class=xl69 style='border-top:none;border-left:none'>Acc(%)</td>
+  <td class=xl93 style='border-top:none;border-left:none'>95.67 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>95.67 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>99.24 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>99.26 </td>
+  <td class=xl94 style='border-top:none;border-left:none'>99.28 </td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>Num</td>
+  <td class=xl95 style='border-top:none;border-left:none'>39564 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>39438 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>44264 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>44279 </td>
+  <td class=xl96 style='border-top:none;border-left:none'>44217 </td>
  </tr>
 </table>
 
