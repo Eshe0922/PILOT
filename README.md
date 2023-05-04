@@ -34,11 +34,11 @@ checking.
 ## Dataset
 To investigate the effectiveness of PUVD, we adopt three vulnerability datasets from these paper:
 
-Fan et al. [1]: https://drive.google.com/file/d/1-0VhnHBp9IGh90s2wCNjeCMuy70HPl8X/view?usp=sharing
+* Fan et al. [1]: https://drive.google.com/file/d/1-0VhnHBp9IGh90s2wCNjeCMuy70HPl8X/view?usp=sharing
 
-Reveal [2]: https://drive.google.com/drive/folders/1KuIYgFcvWUXheDhT--cBALsfy1I4utOyF
+* Reveal [2]: https://drive.google.com/drive/folders/1KuIYgFcvWUXheDhT--cBALsfy1I4utOyF
 
-FFMPeg+Qemu [3]: https://drive.google.com/file/d/1x6hoF7G-tSYxg8AFybggypLZgMGDNHfF
+* FFMPeg+Qemu [3]: https://drive.google.com/file/d/1x6hoF7G-tSYxg8AFybggypLZgMGDNHfF
 
 To download the dataset used for evaluation in our experiments, run the following commands:
     
@@ -57,7 +57,7 @@ If you want to run the model quickly, you can execute the following command:
 
 If you want to fine-tune the parameters of each step of the model, you can execute the following command:
 
-> + For Initial fine-tuning in Inter-class Distance Prototype:
+* For Initial fine-tuning in Inter-class Distance Prototype:
 
     python run.py \
         --output_dir=./saved_models/train_1 \
@@ -79,7 +79,7 @@ If you want to fine-tune the parameters of each step of the model, you can execu
         --evaluate_during_training \
         --seed 123456  2>&1 | tee train1.log 
 
-> + For Selection of Reliable Negative (RN) samples in Inter-class Distance Prototype:
+* For Selection of Reliable Negative (RN) samples in Inter-class Distance Prototype:
 
     python run.py \
         --output_dir=./saved_models/train_1 \
@@ -103,7 +103,7 @@ If you want to fine-tune the parameters of each step of the model, you can execu
         --evaluate_during_training \
         --seed 123456  2>&1 | tee step1.log 
 
-> + For First step in Progressive Fine-tuning:
+* For First step in Progressive Fine-tuning:
 
     python run.py \
         --output_dir=./saved_models/train_2 \
@@ -125,7 +125,7 @@ If you want to fine-tune the parameters of each step of the model, you can execu
         --evaluate_during_training \
         --seed 123456  2>&1 | tee train2.log 
 
-> + For Second step in Progressive Fine-tuning:
+* For Second step in Progressive Fine-tuning:
 
     python run.py \
         --output_dir=./saved_models/train_2 \
@@ -149,7 +149,7 @@ If you want to fine-tune the parameters of each step of the model, you can execu
         --evaluate_during_training \
         --seed 123456  2>&1 | tee train_iterative.log
 
-> + For Pesudo-label Metric Learning Module：
+* For Pesudo-label Metric Learning Module：
 
     python run.py \
         --output_dir=./saved_models/Model_add/train_3 \
