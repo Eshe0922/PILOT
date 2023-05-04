@@ -388,6 +388,128 @@ To download the dataset used for evaluation in our experiments, run the followin
 
 ### Results of RQ4
 
+<table border=0 cellpadding=0 cellspacing=0 width=1050 style='border-collapse:
+ collapse;table-layout:fixed;width:784pt'>
+ <col width=150 span=7 style='width:112pt'>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 width=150 style='height:13.8pt;width:112pt'>Dataset</td>
+  <td class=xl69 width=150 style='border-left:none;width:112pt'>Ratio</td>
+  <td class=xl91 width=150 style='border-left:none;width:112pt'>10%</td>
+  <td class=xl92 width=150 style='border-left:none;width:112pt'>30%</td>
+  <td class=xl92 width=150 style='border-left:none;width:112pt'>50%</td>
+  <td class=xl92 width=150 style='border-left:none;width:112pt'>70%</td>
+  <td class=xl92 width=150 style='border-left:none;width:112pt'>100%</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=4 height=72 class=xl69 style='height:55.2pt;border-top:none'>FFMPeg+Qemu</td>
+  <td class=xl69 style='border-top:none;border-left:none'>Acc</td>
+  <td class=xl89 style='border-top:none;border-left:none'>55.93</td>
+  <td class=xl89 style='border-top:none;border-left:none'>58.38</td>
+  <td class=xl90 style='border-top:none;border-left:none'>59.77</td>
+  <td class=xl90 style='border-top:none;border-left:none'>60.65</td>
+  <td class=xl90 style='border-top:none;border-left:none'>63.14</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>Pre</td>
+  <td class=xl89 style='border-top:none;border-left:none'>51.93</td>
+  <td class=xl89 style='border-top:none;border-left:none'>54.66</td>
+  <td class=xl90 style='border-top:none;border-left:none'>56.54</td>
+  <td class=xl90 style='border-top:none;border-left:none'>57.38</td>
+  <td class=xl90 style='border-top:none;border-left:none'>58.23</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>Rec</td>
+  <td class=xl89 style='border-top:none;border-left:none'>54.66</td>
+  <td class=xl89 style='border-top:none;border-left:none'>55.48</td>
+  <td class=xl90 style='border-top:none;border-left:none'>53.71</td>
+  <td class=xl90 style='border-top:none;border-left:none'>55.78</td>
+  <td class=xl90 style='border-top:none;border-left:none'>69.88</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>F1</td>
+  <td class=xl89 style='border-top:none;border-left:none'>53.26</td>
+  <td class=xl89 style='border-top:none;border-left:none'>54.99</td>
+  <td class=xl90 style='border-top:none;border-left:none'>55.09</td>
+  <td class=xl90 style='border-top:none;border-left:none'>56.57</td>
+  <td class=xl90 style='border-top:none;border-left:none'>63.53</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=4 height=72 class=xl69 style='height:55.2pt;border-top:none'>Reveal</td>
+  <td class=xl69 style='border-top:none;border-left:none'>Acc</td>
+  <td class=xl89 style='border-top:none;border-left:none'>64.69</td>
+  <td class=xl90 style='border-top:none;border-left:none'>83.96</td>
+  <td class=xl90 style='border-top:none;border-left:none'>84.43</td>
+  <td class=xl90 style='border-top:none;border-left:none'>86.41</td>
+  <td class=xl90 style='border-top:none;border-left:none'>88.96</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>Pre</td>
+  <td class=xl89 style='border-top:none;border-left:none'>17.46</td>
+  <td class=xl90 style='border-top:none;border-left:none'>35.11</td>
+  <td class=xl90 style='border-top:none;border-left:none'>39.46</td>
+  <td class=xl90 style='border-top:none;border-left:none'>43.10</td>
+  <td class=xl90 style='border-top:none;border-left:none'>49.14</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>Rec</td>
+  <td class=xl89 style='border-top:none;border-left:none'>61.48</td>
+  <td class=xl90 style='border-top:none;border-left:none'>47.40</td>
+  <td class=xl90 style='border-top:none;border-left:none'>84.43</td>
+  <td class=xl90 style='border-top:none;border-left:none'>83.20</td>
+  <td class=xl90 style='border-top:none;border-left:none'>82.38</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>F1</td>
+  <td class=xl89 style='border-top:none;border-left:none'>27.20</td>
+  <td class=xl90 style='border-top:none;border-left:none'>39.75</td>
+  <td class=xl90 style='border-top:none;border-left:none'>53.79</td>
+  <td class=xl90 style='border-top:none;border-left:none'>56.78</td>
+  <td class=xl90 style='border-top:none;border-left:none'>61.56</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td rowspan=4 height=72 class=xl69 style='height:55.2pt;border-top:none'>Fan
+  et al.</td>
+  <td class=xl69 style='border-top:none;border-left:none'>Acc</td>
+  <td class=xl89 style='border-top:none;border-left:none'>82.08</td>
+  <td class=xl90 style='border-top:none;border-left:none'>90.17</td>
+  <td class=xl90 style='border-top:none;border-left:none'>87.20</td>
+  <td class=xl90 style='border-top:none;border-left:none'>90.01</td>
+  <td class=xl90 style='border-top:none;border-left:none'>92.99</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>Pre</td>
+  <td class=xl89 style='border-top:none;border-left:none'>14.08</td>
+  <td class=xl90 style='border-top:none;border-left:none'>23.97</td>
+  <td class=xl90 style='border-top:none;border-left:none'>22.11</td>
+  <td class=xl90 style='border-top:none;border-left:none'>27.85</td>
+  <td class=xl90 style='border-top:none;border-left:none'>37.97</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>Rec</td>
+  <td class=xl89 style='border-top:none;border-left:none'>43.22</td>
+  <td class=xl90 style='border-top:none;border-left:none'>34.84</td>
+  <td class=xl90 style='border-top:none;border-left:none'>51.09</td>
+  <td class=xl90 style='border-top:none;border-left:none'>49.38</td>
+  <td class=xl90 style='border-top:none;border-left:none'>40.10</td>
+ </tr>
+ <tr height=18 style='height:13.8pt'>
+  <td height=18 class=xl69 style='height:13.8pt;border-top:none;border-left:
+  none'>F1</td>
+  <td class=xl89 style='border-top:none;border-left:none'>21.24</td>
+  <td class=xl90 style='border-top:none;border-left:none'>28.40</td>
+  <td class=xl90 style='border-top:none;border-left:none'>30.86</td>
+  <td class=xl90 style='border-top:none;border-left:none'>35.61</td>
+  <td class=xl90 style='border-top:none;border-left:none'>39.00</td>
+ </tr>
+</table>
 
 ## References
 [1] Jiahao Fan, Yi Li, Shaohua Wang, and Tien Nguyen. 2020. A C/C++ Code Vulnerability Dataset with Code Changes and CVE Summaries. In The 2020 International Conference on Mining Software Repositories (MSR). IEEE.
