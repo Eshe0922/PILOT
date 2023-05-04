@@ -49,6 +49,18 @@ Notice：If you want to download multiple datasets, please note the overlay of t
     cd ..
     python split data_Devign(Reveal/Fan).py
 
+## Environment Setup
+
+    pip install torch
+    pip install transformers
+    pip install numpy
+    pip install gdown
+    pip install tqdm
+    pip install pickle
+    pip install sklearn
+    pip install pandas
+    pip install tokenizers
+    
 ## Running the model
 
 If you want to run the model quickly, you can execute the following command:
