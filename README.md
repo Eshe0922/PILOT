@@ -2,6 +2,45 @@
 # When Less is Enough: Positive-Unlabeled Learning Model for Vulnerability Detection
 ## Introducion
 
+Automated code vulnerability detection has gained
+increasing attention in recent years. The deep learning (DL)-
+based methods, which implicitly learn vulnerable code patterns,
+have proven effective in vulnerability detection. The performance
+of DL-based methods usually relies on the quantity and quality
+of labeled data. However, the current labeled data are generally
+automatically collected, such as crawled from human-generated
+commits, making it hard to ensure the quality of the labels. Prior
+studies have demonstrated that the non-vulnerable code (i.e.,
+negative labels) tends to be unreliable in commonly-used datasets,
+while vulnerable code (i.e., positive labels) is more determined.
+Considering the large numbers of unlabeled data in practice, it is
+necessary and worth exploring to leverage the positive data and
+large numbers of unlabeled data for more accurate vulnerability
+detection.
+
+In this paper, we focus on the Positive and Unlabeled (PU)
+learning problem for vulnerability detection and propose a novel
+model named PILOT, i.e., PositIve and unlabeled Learning
+mOdel for vulnerability deTection. PILOT only learns from
+positive and unlabeled data for vulnerability detection. It mainly
+contains two modules: (1) A distance-aware label selection
+module, aiming at generating pseudo-labels for selected unlabeled
+data, which involves the inter-class distance prototype and
+progressive fine-tuning; (2) A mixed-supervision representation
+learning module to further alleviate the influence of noise
+and enhance the discrimination of representations. Extensive
+experiments in vulnerability detection are conducted to evaluate
+the effectiveness of PILOT based on real-world vulnerability
+datasets. The experimental results show that PILOT outperforms
+the popular weakly supervised methods by 2.78%-18.93% in the
+PU learning setting. Compared with the state-of-the-art methods,
+PILOT also improves the performance of 1.34%-12.46% in F1
+score metrics in the supervised setting. In addition, PILOT can
+identify 23 mislabeled from the FFMPeg+Qemu dataset in the
+PU learning setting based on manual checking.
+Index Terms—Software vulnerability detection, positive and
+unlabeled learning, source code representation
+
 ## Dataset
 To investigate the effectiveness of PUVD, we adopt three vulnerability datasets from these paper:
 
@@ -11,14 +50,14 @@ To investigate the effectiveness of PUVD, we adopt three vulnerability datasets 
 
 * FFMPeg+Qemu [3]: https://drive.google.com/file/d/1x6hoF7G-tSYxg8AFybggypLZgMGDNHfF
 
-To download the dataset used for evaluation in our experiments, run the following commands:
+<!-- To download the dataset used for evaluation in our experiments, run the following commands: -->
     
-Notice：If you want to download multiple datasets, please note the overlay of the storage location!
+<!-- Notice：If you want to download multiple datasets, please note the overlay of the storage location!
 
     cd data_raw
     gdown path_Devign(path_Reveal/path_Fan)
     cd ..
-    python split data_Devign(Reveal/Fan).py
+    python split data_Devign(Reveal/Fan).py -->
 
 ## Environment Setup
 
@@ -34,19 +73,125 @@ Notice：If you want to download multiple datasets, please note the overlay of t
 
 ## Running the model
 
-## Results
-### Results of RQ1
+If you want to run the model quickly, you can execute the following command:
 
+    run PUVD.sh
 
+If you want to fine-tune the parameters of each step of the model, you can execute the following command:
 
-### Results of RQ2
+* For Initial fine-tuning in Inter-class Distance Prototype:
 
+        python run.py \
+            --output_dir=./saved_models/train_1 \
+            --model_type=roberta \
+            --tokenizer_name=microsoft/codebert-base \
+            --model_name_or_path=microsoft/codebert-base \
+            --do_train_1\
+            --labels_file=./data/data_result/ \
+            --label_ratio  0.3 \
+            --train_data_file=./data/data_preprocessed/train.txt \
+            --eval_data_file=./data/data_preprocessed/valid.txt \
+            --test_data_file=./data/data_preprocessed/test.txt \
+            --epoch 5 \
+            --block_size 512 \
+            --train_batch_size 32 \
+            --eval_batch_size 64 \
+            --learning_rate 2e-5 \
+            --max_grad_norm 1.0 \
+            --evaluate_during_training \
+            --seed 123456  2>&1 | tee train1.log 
 
+* For Selection of Reliable Negative (RN) samples in Inter-class Distance Prototype:
 
-### Results of RQ3
+        python run.py \
+            --output_dir=./saved_models/train_1 \
+            --model_type=roberta \
+            --tokenizer_name=microsoft/codebert-base \
+            --model_name_or_path=microsoft/codebert-base \
+            --do_step1\
+            --labels_file=./data/data_result/ \
+            --label_ratio  0.3 \
+            --train_data_file=./data/data_preprocessed/train.txt \
+            --eval_data_file=./data/data_preprocessed/valid.txt \
+            --test_data_file=./data/data_preprocessed/test.txt \
+            --epoch 5 \
+            --P_num 10018 \
+            --N_num 11836 \
+            --block_size 512 \
+            --train_batch_size 32 \
+            --eval_batch_size 64 \
+            --learning_rate 2e-5 \
+            --max_grad_norm 1.0 \
+            --evaluate_during_training \
+            --seed 123456  2>&1 | tee step1.log 
 
+* For First step in Progressive Fine-tuning:
 
-### Results of RQ4
+        python run.py \
+            --output_dir=./saved_models/train_2 \
+            --model_type=roberta \
+            --tokenizer_name=microsoft/codebert-base \
+            --model_name_or_path=microsoft/codebert-base \
+            --do_train_2\
+            --labels_file=./data/data_result/ \
+            --label_ratio  0.3 \
+            --train_data_file=./data/data_preprocessed/train.txt \
+            --eval_data_file=./data/data_preprocessed/valid.txt \
+            --test_data_file=./data/data_preprocessed/test.txt \
+            --epoch 5 \
+            --block_size 512 \
+            --train_batch_size 32 \
+            --eval_batch_size 64 \
+            --learning_rate 2e-5 \
+            --max_grad_norm 1.0 \
+            --evaluate_during_training \
+            --seed 123456  2>&1 | tee train2.log 
+
+* For Second step in Progressive Fine-tuning:
+
+        python run.py \
+            --output_dir=./saved_models/train_2 \
+            --model_type=roberta \
+            --tokenizer_name=microsoft/codebert-base \
+            --model_name_or_path=microsoft/codebert-base \
+            --do_train_iterative\
+            --labels_file=./data/data_result/ \
+            --label_ratio  0.3 \
+            --train_data_file=./data/data_preprocessed/train.txt \
+            --eval_data_file=./data/data_preprocessed/valid.txt \
+            --test_data_file=./data/data_preprocessed/test.txt \
+            --epoch 5 \
+            --P_num 10018 \
+            --N_num 11836 \
+            --block_size 512 \
+            --train_batch_size 32 \
+            --eval_batch_size 64 \
+            --learning_rate 2e-5 \
+            --max_grad_norm 1.0 \
+            --evaluate_during_training \
+            --seed 123456  2>&1 | tee train_iterative.log
+
+* For Mixed-supervision representation learning module：
+
+        python run.py \
+            --output_dir=./saved_models/Model_add/train_3 \
+            --model_type=roberta \
+            --tokenizer_name=microsoft/codebert-base \
+            --model_name_or_path=microsoft/codebert-base \
+            --do_train_3\
+            --labels_file=./data/data_result/ \
+            --label_ratio  0.3 \
+            --train_data_file=./data/data_preprocessed/train.txt \
+            --eval_data_file=./data/data_preprocessed/valid.txt \
+            --test_data_file=./data/data_preprocessed/test.txt \
+            --epoch 5 \
+            --block_size 512 \
+            --train_batch_size 32 \
+            --eval_batch_size 64 \
+            --learning_rate 2e-5 \
+            --max_grad_norm 1.0 \
+            --evaluate_during_training \
+            --seed 123456  2>&1 | tee train3.log
 
 ## References
 [1] Jiahao Fan, Yi Li, Shaohua Wang, and Tien Nguyen. 2020. A C/C++ Code Vulnerability Dataset with Code Changes and CVE Summaries. In The 2020 International Conference on Mining Software Repositories (MSR). IEEE.
