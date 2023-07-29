@@ -7,7 +7,7 @@ Automated code vulnerability detection has gained increasing attention in recent
 In this paper, we focus on the Positive and Unlabeled (PU) learning problem for vulnerability detection and propose a novel model named PILOT, i.e., PositIve and unlabeled Learning mOdel for vulnerability deTection. PILOT only learns from positive and unlabeled data for vulnerability detection. It mainly contains two modules: (1) A distance-aware label selection module, aiming at generating pseudo-labels for selected unlabeled data, which involves the inter-class distance prototype and progressive fine-tuning; (2) A mixed-supervision representation learning module to further alleviate the influence of noise and enhance the discrimination of representations. Extensive experiments in vulnerability detection are conducted to evaluate the effectiveness of PILOT based on real-world vulnerability datasets. The experimental results show that PILOT outperforms the popular weakly supervised methods by 2.78%-18.93% in the PU learning setting. Compared with the state-of-the-art methods, PILOT also improves the performance of 1.34%-12.46% in F1 score metrics in the supervised setting. In addition, PILOT can identify 23 mislabeled from the FFMPeg+Qemu dataset in the PU learning setting based on manual checking.
 
 ## Dataset
-To investigate the effectiveness of PUVD, we adopt three vulnerability datasets from these paper:
+To investigate the effectiveness of PILOT, we adopt three vulnerability datasets from these paper:
 
 * Fan et al. [1]: https://drive.google.com/file/d/1-0VhnHBp9IGh90s2wCNjeCMuy70HPl8X/view?usp=sharing
 
@@ -15,14 +15,7 @@ To investigate the effectiveness of PUVD, we adopt three vulnerability datasets 
 
 * FFMPeg+Qemu [3]: https://drive.google.com/file/d/1x6hoF7G-tSYxg8AFybggypLZgMGDNHfF
 
-<!-- To download the dataset used for evaluation in our experiments, run the following commands: -->
-    
-<!-- Notice：If you want to download multiple datasets, please note the overlay of the storage location!
-
-    cd data_raw
-    gdown path_Devign(path_Reveal/path_Fan)
-    cd ..
-    python split data_Devign(Reveal/Fan).py -->
+The three datasets are stored in the "dataset" directory as zips, each zip containing three files: "train.txt" "valid.txt" "test.txt".
 
 ## Environment Setup
 
@@ -40,7 +33,7 @@ To investigate the effectiveness of PUVD, we adopt three vulnerability datasets 
 
 If you want to run the model quickly, you can execute the following command:
 
-    run PUVD.sh
+    run PILOT.sh
 
 If you want to fine-tune the parameters of each step of the model, you can execute the following command:
 
@@ -66,7 +59,7 @@ If you want to fine-tune the parameters of each step of the model, you can execu
             --evaluate_during_training \
             --seed 123456  2>&1 | tee train1.log 
 
-* For Selection of Reliable Negative (RN) samples in Inter-class Distance Prototype:
+* For Selection of High-quality Negative (HN) samples in Inter-class Distance Prototype:
 
         python run.py \
             --output_dir=./saved_models/train_1 \
@@ -157,6 +150,13 @@ If you want to fine-tune the parameters of each step of the model, you can execu
             --max_grad_norm 1.0 \
             --evaluate_during_training \
             --seed 123456  2>&1 | tee train3.log
+
+* Tips:
+|Dataset|P_num|N_num|
+|:----: |:----:|:----:|
+|Fan|8736|150908|
+|Reveal|1760|18187|
+|FFMPeg+Qemu|10018|11836|
 
 ## References
 [1] Jiahao Fan, Yi Li, Shaohua Wang, and Tien Nguyen. 2020. A C/C++ Code Vulnerability Dataset with Code Changes and CVE Summaries. In The 2020 International Conference on Mining Software Repositories (MSR). IEEE.
