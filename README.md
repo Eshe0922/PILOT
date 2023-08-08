@@ -29,7 +29,7 @@ The three datasets are stored in the "dataset" directory as zips, each zip conta
     pip install pandas
     pip install tokenizers
 
-## Running the model
+<!-- ## Running the model
 
 If you want to run the model quickly, you can execute the following command:
 
@@ -156,7 +156,13 @@ If you want to fine-tune the parameters of each step of the model, you can execu
 |:----: |:----:|:----:|
 |Fan|8736|150908|
 |Reveal|1760|18187|
-|FFMPeg+Qemu|10018|11836|
+|FFMPeg+Qemu|10018|11836| -->
+
+## Test the model
+
+If you want to test the model quickly, you can execute the following command:
+
+    run test.sh
 
 ## References
 [1] Jiahao Fan, Yi Li, Shaohua Wang, and Tien Nguyen. 2020. A C/C++ Code Vulnerability Dataset with Code Changes and CVE Summaries. In The 2020 International Conference on Mining Software Repositories (MSR). IEEE.

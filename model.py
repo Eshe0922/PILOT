@@ -47,7 +47,7 @@ class Model_train_3(nn.Module):
         self.tokenizer=tokenizer
         self.args=args
         self.fc = nn.Linear(1*768, 1)
-        self.con_para = nn.Parameter(torch.ones(1)*0.5)
+        self.con_para = nn.Parameter(torch.ones(1)*0.5).cuda()
         
     def forward(self, input_ids=None,labels=None,epochs_now = None,epoch_max = None,type = None): 
         outputs=self.encoder(input_ids,attention_mask=input_ids.ne(1),
