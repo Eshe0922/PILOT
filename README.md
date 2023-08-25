@@ -160,9 +160,13 @@ If you want to fine-tune the parameters of each step of the model, you can execu
 
 ## Test the model
 
-You can download the models by executing the following command:
+You can download the models by executing the following command：
 
     gdown https://drive.google.com/uc?id=10UtMoa_3WE-w8jtWeocMm4OSlue51TTj
+    
+Or by visiting the following site:
+
+    https://drive.google.com/file/d/10UtMoa_3WE-w8jtWeocMm4OSlue51TTj/view?usp=drive_link
 
 If you want to test the model quickly, you can execute the following command:
 
