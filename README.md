@@ -156,7 +156,7 @@ If you want to fine-tune the parameters of each step of the model, you can execu
 |:----: |:----:|:----:|
 |Fan|8736|150908|
 |Reveal|1760|18187|
-|FFMPeg+Qemu|10018|11836| -->
+|FFMPeg+Qemu|10018|11836|
 
 ## Test the model
 
