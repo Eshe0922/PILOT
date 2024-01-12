@@ -28,8 +28,8 @@ The three datasets are stored in the "dataset" directory as zips, each zip conta
     pip install sklearn
     pip install pandas
     pip install tokenizers
-
-<!-- ## Running the model
+    
+## Running the model
 
 If you want to run the model quickly, you can execute the following command:
 
